@@ -334,8 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const sliderSpan = document.createElement('span');
             sliderSpan.innerText = `Image 0${index + 1}`;
             const sliderImg = document.createElement('img'); 
-            const imgUrl = new URL(`/${ele.getAttribute('src')}`, window.location.href);
+            const imgUrl = new URL(`${ele.getAttribute('src')}`, window.location.href);
+            // console.log(imgUrl.href);
             sliderImg.setAttribute('src', imgUrl.href);
+            // console.log(imgUrl.sliderImg);
             sliderDiv.appendChild(sliderImg);
             sliderDiv.appendChild(closeBtn);
             sliderDiv.appendChild(sliderSpan);
