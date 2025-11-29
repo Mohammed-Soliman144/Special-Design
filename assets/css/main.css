@@ -461,10 +461,10 @@ p {
 
 .main-header .themes.active + div.bullets {
     margin-inline: calc(-50vw + 50%);
-    position: absolute;
+    position: fixed;
     top: 240px;
     right: 15px;
-    z-index: 100;
+    z-index: 18;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;

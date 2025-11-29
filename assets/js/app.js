@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // D- Create bullets Elements 
     const parentEle = document.createElement('div');
     parentEle.classList.add('bullets');
+    const oldDiv = document.querySelector('.main-header div.bullets');
+    if(oldDiv !== null) oldDiv.remove();
     for (let i = 0; i < 6; i++) {
         const element = document.createElement('div');
         element.classList.add(`bullet-${i + 1}`);
@@ -330,6 +332,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const sliderDiv = document.createElement('div');
             sliderDiv.classList.add('clicked');
+            const oldGallery = document.querySelector('main .gallery figure + div.clicked');
+            if(oldGallery !== null) oldGallery.remove();
             const closeBtn = document.createElement('button');
             const sliderSpan = document.createElement('span');
             sliderSpan.innerText = `Image 0${index + 1}`;
